@@ -10,6 +10,3 @@ BMP280 sensor measure temperature which is emitting by 5W resistor and send info
 The fan may be turned on to accelerate achieve the set temperature. In our application, we used a fan with an on–off controller.
 # RESULTS
 ![](photos/test.PNG)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMTY3NTkzM119
--->
