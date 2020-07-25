@@ -8,6 +8,5 @@
 You can inflict temperature with the encoder. LCD screen shows set temperature and actual temperature.  LCD show also a small menu where we can set PID values. With every click on the encoder button, we jump on the menu. 
 BMP280 sensor measure temperature which is emitting by 5W resistor and send information to the STM. STM based on received data decides about the voltage on resistor.
 The fan may be turned on to accelerate achieve the set temperature. In our application, we used a fan with an on–off controller.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NzczNjI5M119
--->
+# RESULTS
+![](photos/test.PNG)
