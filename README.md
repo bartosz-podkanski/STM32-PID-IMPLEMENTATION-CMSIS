@@ -3,6 +3,7 @@
 # TOPOLOGY:
 ![](photos/topology.png)
 # REAL IMPLEMENTATION:
+![](photos/image1.jpeg)
 ![](photos/IMG_20200204_113213.jpg)
 **How does it work?**
 You can inflict temperature with the encoder. LCD screen shows set temperature and actual temperature.  LCD show also a small menu where we can set PID values. With every click on the encoder button, we jump on the menu. 
