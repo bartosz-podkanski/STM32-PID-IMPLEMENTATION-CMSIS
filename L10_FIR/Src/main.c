@@ -19,8 +19,8 @@
 /*TODO*/
 /*
 	*Code refactoring
-	*make independent encoder from while == make dependent encoder from timer
-	*make independent LCD from while == make dependent LCD from timer
+	*make independent encoder from while loop == make dependent encoder from timer
+	*make independent LCD from while loop == make dependent LCD from timer
 */
 /*AUTHORS*/
 /*
@@ -70,42 +70,40 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+	// UART for communication with terminal
 		uint8_t temp_size;
 		char buffer[100];
-		int32_t temp32;
-	    double temp;
-	    float error=0;
-	    float pControl=0;
-	    float prev_pControl=0;
-	    float last_set_temp=0;
+		char msg[3];
+		float set_temp_interrupt;
+	
+	// temperatures values
+		int32_t temp32;	// bmp
+	    double temp;	
 	    float set_temp=36;
 	    float actual_temp=0;
-	    int button_pressed=0;
-	    int menu_activated=0;
-	    char zdanie2 [7];	// tablica do wysyłania liczb LCD
-	    float duty;	// wypelnienie pwm rezystora
-	  	float duty_fan;	// wypelnienie pwm wiatraka
+		
+	// PWM duties
+		float duty;	// duty resistor PWM
+	  	float duty_fan;	// duty fan PWM
 
-
-	    //PID global values
+	// PID global values
 	    float set_kp = 100.0f;
 	    float set_ki = 0.1f;
 	    float set_kd = 0.0f;
+		float error=0;	// offset
+	    float pControl=0;	// pControl depends on the error
+	    float prev_pControl=0;
 
-
-	    int wypelnienie;
-	    int zmiana=5;
-
-	    //encoder variables 
+	// encoder and LCD variables 
 		uint8_t stan_obecny_ENC=0;
 		uint8_t stan_poprzedni_ENC=0;
-		int zlicz_przycisk=0;	//click counting
-		int zlicz_poprzednie=0;	//previous state counting 
-
-		//UART communication with terminal 
-		char msg[3];
-		float set_temp_interrupt;
-
+		int zlicz_przycisk=0;	// click counting
+		int zlicz_poprzednie=0;	// previous state counting 
+		int button_pressed=0;
+	    int menu_activated=0;
+	    char zdanie2 [7];	// table for sending temp to LCD
+		
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
