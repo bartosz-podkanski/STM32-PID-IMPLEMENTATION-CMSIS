@@ -302,7 +302,7 @@ int main(void)
 
 
 	/********************LCD*****************/
-	/* PATRYK WSTAW PROSZE LINKA DO BIBLIOTEKI LCD */
+	/* https://controllerstech.com/i2c-lcd-in-stm32 */
 
 	/* encoder button filter ****see section TODO**** */
 		if(zlicz_przycisk>zlicz_poprzednie){
